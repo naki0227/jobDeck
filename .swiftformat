@@ -1,0 +1,8 @@
+--swiftversion 6
+--indent 4
+--linebreaks lf
+--trimwhitespace always
+--stripunusedargs closure-only
+--commas inline
+--header ignore
+--exclude .git,JobDeck.xcodeproj,docs,workflow

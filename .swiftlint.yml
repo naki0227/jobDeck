@@ -1,0 +1,53 @@
+included:
+  - App
+  - Components
+  - Features
+  - Models
+  - Services
+  - Tests
+
+excluded:
+  - .git
+  - .build
+  - JobDeck.xcodeproj
+  - docs
+  - workflow
+
+opt_in_rules:
+  - empty_count
+  - first_where
+  - operator_usage_whitespace
+  - sorted_first_last
+  - vertical_parameter_alignment_on_call
+
+disabled_rules:
+  - todo
+
+line_length:
+  warning: 140
+  error: 180
+  ignores_comments: true
+  ignores_urls: true
+
+file_length:
+  warning: 500
+  error: 800
+
+function_body_length:
+  warning: 60
+  error: 100
+
+type_body_length:
+  warning: 250
+  error: 400
+
+identifier_name:
+  min_length:
+    warning: 2
+  excluded:
+    - id
+    - UI
+    - AI
+    - at
+
+reporter: github-actions-logging
