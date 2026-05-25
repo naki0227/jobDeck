@@ -1,10 +1,11 @@
 import SwiftUI
 
-struct CompanyFormView: View {
+struct CompanyFormView<ExtraContent: View>: View {
     let title: String
     @Binding var draft: CompanyDraft
     let errorMessage: String?
     let onSave: () -> Void
+    @ViewBuilder let extraContent: () -> ExtraContent
 
     @Environment(\.dismiss) private var dismiss
     @State private var interviewEnabled = false
@@ -44,6 +45,8 @@ struct CompanyFormView: View {
                     TextField("企業メモ", text: $draft.memo, axis: .vertical)
                         .lineLimit(5, reservesSpace: true)
                 }
+
+                extraContent()
 
                 if let errorMessage {
                     Section {
@@ -93,6 +96,7 @@ struct CompanyFormView: View {
         title: "企業追加",
         draft: .constant(CompanyDraft()),
         errorMessage: nil,
-        onSave: {}
+        onSave: {},
+        extraContent: { EmptyView() }
     )
 }

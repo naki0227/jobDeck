@@ -46,6 +46,12 @@
 		A037 /* EpisodeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B035 /* EpisodeListView.swift */; };
 		A038 /* EpisodeFormValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B036 /* EpisodeFormValidatorTests.swift */; };
 		A039 /* EpisodeEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B037 /* EpisodeEditorTests.swift */; };
+		A040 /* CompanyEpisodeLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038 /* CompanyEpisodeLink.swift */; };
+		A041 /* CompanyEpisodeLinkEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B039 /* CompanyEpisodeLinkEditor.swift */; };
+		A042 /* CompanyEpisodeLinkBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B040 /* CompanyEpisodeLinkBuilder.swift */; };
+		A043 /* CompanyEpisodeLinkSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B041 /* CompanyEpisodeLinkSheet.swift */; };
+		A044 /* CompanyEpisodeLinkBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B042 /* CompanyEpisodeLinkBuilderTests.swift */; };
+		A045 /* CompanyEpisodeLinkEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B043 /* CompanyEpisodeLinkEditorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +102,12 @@
 		B035 /* EpisodeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Episodes/EpisodeListView.swift; sourceTree = SOURCE_ROOT; };
 		B036 /* EpisodeFormValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/EpisodeFormValidatorTests.swift; sourceTree = SOURCE_ROOT; };
 		B037 /* EpisodeEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/EpisodeEditorTests.swift; sourceTree = SOURCE_ROOT; };
+		B038 /* CompanyEpisodeLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/CompanyEpisodeLink.swift; sourceTree = SOURCE_ROOT; };
+		B039 /* CompanyEpisodeLinkEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Companies/CompanyEpisodeLinkEditor.swift; sourceTree = SOURCE_ROOT; };
+		B040 /* CompanyEpisodeLinkBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Companies/CompanyEpisodeLinkBuilder.swift; sourceTree = SOURCE_ROOT; };
+		B041 /* CompanyEpisodeLinkSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Companies/CompanyEpisodeLinkSheet.swift; sourceTree = SOURCE_ROOT; };
+		B042 /* CompanyEpisodeLinkBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/CompanyEpisodeLinkBuilderTests.swift; sourceTree = SOURCE_ROOT; };
+		B043 /* CompanyEpisodeLinkEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/CompanyEpisodeLinkEditorTests.swift; sourceTree = SOURCE_ROOT; };
 		B101 /* JobDeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobDeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B102 /* JobDeckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JobDeckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -144,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				B003 /* Company.swift */,
+				B038 /* CompanyEpisodeLink.swift */,
 				B004 /* Episode.swift */,
 				B005 /* InterviewDeck.swift */,
 				B006 /* HomeSnapshot.swift */,
@@ -187,6 +200,8 @@
 				B023 /* CompanyFormValidatorTests.swift */,
 				B024 /* CompanyEditorTests.swift */,
 				B028 /* CompanyListMetricsBuilderTests.swift */,
+				B042 /* CompanyEpisodeLinkBuilderTests.swift */,
+				B043 /* CompanyEpisodeLinkEditorTests.swift */,
 				B036 /* EpisodeFormValidatorTests.swift */,
 				B037 /* EpisodeEditorTests.swift */,
 			);
@@ -224,6 +239,9 @@
 				B025 /* CompanyListMetrics.swift */,
 				B026 /* CompanyListMetricsBuilder.swift */,
 				B027 /* CompanyMetricsHeaderView.swift */,
+				B039 /* CompanyEpisodeLinkEditor.swift */,
+				B040 /* CompanyEpisodeLinkBuilder.swift */,
+				B041 /* CompanyEpisodeLinkSheet.swift */,
 				B012 /* CompanyListView.swift */,
 			);
 			path = Companies;
@@ -368,6 +386,10 @@
 				A027 /* CompanyListMetrics.swift in Sources */,
 				A028 /* CompanyListMetricsBuilder.swift in Sources */,
 				A029 /* CompanyMetricsHeaderView.swift in Sources */,
+				A040 /* CompanyEpisodeLink.swift in Sources */,
+				A041 /* CompanyEpisodeLinkEditor.swift in Sources */,
+				A042 /* CompanyEpisodeLinkBuilder.swift in Sources */,
+				A043 /* CompanyEpisodeLinkSheet.swift in Sources */,
 				A031 /* EpisodeDraft.swift in Sources */,
 				A032 /* EpisodeFormValidator.swift in Sources */,
 				A033 /* EpisodeEditor.swift in Sources */,
@@ -389,6 +411,8 @@
 				A025 /* CompanyFormValidatorTests.swift in Sources */,
 				A026 /* CompanyEditorTests.swift in Sources */,
 				A030 /* CompanyListMetricsBuilderTests.swift in Sources */,
+				A044 /* CompanyEpisodeLinkBuilderTests.swift in Sources */,
+				A045 /* CompanyEpisodeLinkEditorTests.swift in Sources */,
 				A038 /* EpisodeFormValidatorTests.swift in Sources */,
 				A039 /* EpisodeEditorTests.swift in Sources */,
 			);

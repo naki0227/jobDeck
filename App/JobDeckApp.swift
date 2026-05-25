@@ -9,6 +9,7 @@ struct JobDeckApp: App {
         }
         .modelContainer(for: [
             Company.self,
+            CompanyEpisodeLink.self,
             Episode.self,
             InterviewDeck.self,
         ])

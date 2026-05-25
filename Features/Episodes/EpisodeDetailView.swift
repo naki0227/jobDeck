@@ -5,6 +5,8 @@ struct EpisodeDetailView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
 
+    @Query(sort: \CompanyEpisodeLink.updatedAt, order: .reverse) private var allLinks: [CompanyEpisodeLink]
+
     @Bindable var episode: Episode
 
     @State private var draft: EpisodeDraft
@@ -52,13 +54,19 @@ struct EpisodeDetailView: View {
     }
 
     private func deleteEpisode() {
-        modelContext.delete(episode)
-
         do {
+            for link in episodeLinks {
+                modelContext.delete(link)
+            }
+            modelContext.delete(episode)
             try modelContext.save()
             dismiss()
         } catch {
             errorMessage = "削除に失敗しました。少し時間をおいて再度お試しください。"
         }
+    }
+
+    private var episodeLinks: [CompanyEpisodeLink] {
+        allLinks.filter { $0.episodeID == episode.id }
     }
 }

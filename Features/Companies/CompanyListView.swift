@@ -59,7 +59,8 @@ struct CompanyListView: View {
                     title: "企業追加",
                     draft: $draft,
                     errorMessage: errorMessage,
-                    onSave: createCompany
+                    onSave: createCompany,
+                    extraContent: { EmptyView() }
                 )
             }
         }
