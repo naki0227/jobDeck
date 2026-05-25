@@ -162,6 +162,36 @@ AI Gateway
 - 課金状態は StoreKit 2 で扱う
 - AI クレジットは MVP ではローカル中心で管理し、将来はサーバー側へ移す
 
+## 5.1 開発品質と CI 方針
+
+MVP 段階から、個人情報を扱うアプリとして最低限の開発品質チェックを自動化します。
+
+目的:
+
+- 画面実装の速度を落とさずに、危険な変更を早めに検知する
+- コードスタイルの差分でレビューが荒れないようにする
+- main ブランチに壊れた状態が入るのを防ぐ
+
+採用方針:
+
+- 整形: `SwiftFormat`
+- 静的解析: `SwiftLint`
+- テスト: `Swift Testing`
+- CI 実行基盤: `GitHub Actions`
+
+CI で最低限確認する内容:
+
+- SwiftFormat の lint モード
+- SwiftLint の strict lint
+- `xcodebuild build`
+- `xcodebuild test`
+
+補足:
+
+- 依存追加が重い UI テスト基盤は、この段階では無理に入れない
+- 静的解析ルールは最初から厳しすぎない設定にし、運用しながら調整する
+- CI で使う simulator 名は固定しすぎず、利用可能な iPhone simulator を自動選択する
+
 ## 6. 画面構成
 
 ### タブ構成
