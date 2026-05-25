@@ -1,0 +1,57 @@
+name: iOS CI
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  quality:
+    runs-on: macos-15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+
+      - name: Install SwiftFormat and SwiftLint
+        run: brew install swiftformat swiftlint
+
+      - name: Lint formatting
+        run: swiftformat --lint .
+
+      - name: Lint code style
+        run: swiftlint lint --strict
+
+      - name: Resolve simulator destination
+        id: simulator
+        run: |
+          ruby -e '
+            output = `xcodebuild -scheme JobDeck -showdestinations 2>/dev/null`
+            line = output.lines.find do |entry|
+              entry.include?("platform:iOS Simulator") &&
+                entry.include?("name:iPhone") &&
+                !entry.include?("placeholder")
+            end
+            abort("No available iPhone simulator destination found.") unless line
+            simulator_id = line[/id:([^,}]+)/, 1]&.strip
+            simulator_name = line[/name:([^,}]+)/, 1]&.strip
+            abort("No simulator id found in destination list.") if simulator_id.to_s.empty?
+            File.open(ENV.fetch("GITHUB_OUTPUT"), "a") do |file|
+              file.puts("simulator_id=#{simulator_id}")
+              file.puts("simulator_name=#{simulator_name}")
+            end
+          '
+
+      - name: Build
+        run: xcodebuild -scheme JobDeck -destination "platform=iOS Simulator,id=${{ steps.simulator.outputs.simulator_id }}" build
+
+      - name: Test
+        run: xcodebuild -scheme JobDeck -destination "platform=iOS Simulator,id=${{ steps.simulator.outputs.simulator_id }}" test
