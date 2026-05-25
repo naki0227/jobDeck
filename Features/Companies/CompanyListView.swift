@@ -14,6 +14,14 @@ struct CompanyListView: View {
     var body: some View {
         NavigationStack {
             List {
+                if !companies.isEmpty {
+                    Section {
+                        CompanyMetricsHeaderView(metrics: metrics)
+                            .listRowInsets(EdgeInsets())
+                            .listRowBackground(Color.clear)
+                    }
+                }
+
                 if companies.isEmpty {
                     Section {
                         ContentUnavailableView(
@@ -55,6 +63,10 @@ struct CompanyListView: View {
                 )
             }
         }
+    }
+
+    private var metrics: CompanyListMetrics {
+        CompanyListMetricsBuilder().build(from: companies)
     }
 
     private func createCompany() {

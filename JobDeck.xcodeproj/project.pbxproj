@@ -33,6 +33,10 @@
 		A024 /* CompanyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B022 /* CompanyDetailView.swift */; };
 		A025 /* CompanyFormValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B023 /* CompanyFormValidatorTests.swift */; };
 		A026 /* CompanyEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B024 /* CompanyEditorTests.swift */; };
+		A027 /* CompanyListMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025 /* CompanyListMetrics.swift */; };
+		A028 /* CompanyListMetricsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B026 /* CompanyListMetricsBuilder.swift */; };
+		A029 /* CompanyMetricsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B027 /* CompanyMetricsHeaderView.swift */; };
+		A030 /* CompanyListMetricsBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028 /* CompanyListMetricsBuilderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +74,10 @@
 		B022 /* CompanyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Companies/CompanyDetailView.swift; sourceTree = SOURCE_ROOT; };
 		B023 /* CompanyFormValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/CompanyFormValidatorTests.swift; sourceTree = SOURCE_ROOT; };
 		B024 /* CompanyEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/CompanyEditorTests.swift; sourceTree = SOURCE_ROOT; };
+		B025 /* CompanyListMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Companies/CompanyListMetrics.swift; sourceTree = SOURCE_ROOT; };
+		B026 /* CompanyListMetricsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Companies/CompanyListMetricsBuilder.swift; sourceTree = SOURCE_ROOT; };
+		B027 /* CompanyMetricsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Companies/CompanyMetricsHeaderView.swift; sourceTree = SOURCE_ROOT; };
+		B028 /* CompanyListMetricsBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/CompanyListMetricsBuilderTests.swift; sourceTree = SOURCE_ROOT; };
 		B101 /* JobDeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobDeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B102 /* JobDeckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JobDeckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -159,6 +167,7 @@
 				B016 /* HomeSummaryBuilderTests.swift */,
 				B023 /* CompanyFormValidatorTests.swift */,
 				B024 /* CompanyEditorTests.swift */,
+				B028 /* CompanyListMetricsBuilderTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -191,6 +200,9 @@
 				B020 /* CompanyFormView.swift */,
 				B021 /* CompanyRowView.swift */,
 				B022 /* CompanyDetailView.swift */,
+				B025 /* CompanyListMetrics.swift */,
+				B026 /* CompanyListMetricsBuilder.swift */,
+				B027 /* CompanyMetricsHeaderView.swift */,
 				B012 /* CompanyListView.swift */,
 			);
 			path = Companies;
@@ -318,6 +330,9 @@
 				A022 /* CompanyFormView.swift in Sources */,
 				A023 /* CompanyRowView.swift in Sources */,
 				A024 /* CompanyDetailView.swift in Sources */,
+				A027 /* CompanyListMetrics.swift in Sources */,
+				A028 /* CompanyListMetricsBuilder.swift in Sources */,
+				A029 /* CompanyMetricsHeaderView.swift in Sources */,
 				A013 /* SelfCardsView.swift in Sources */,
 				A014 /* InterviewPrepView.swift in Sources */,
 				A015 /* SettingsView.swift in Sources */,
@@ -331,6 +346,7 @@
 				A016 /* HomeSummaryBuilderTests.swift in Sources */,
 				A025 /* CompanyFormValidatorTests.swift in Sources */,
 				A026 /* CompanyEditorTests.swift in Sources */,
+				A030 /* CompanyListMetricsBuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
