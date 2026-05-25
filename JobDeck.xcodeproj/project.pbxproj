@@ -37,6 +37,15 @@
 		A028 /* CompanyListMetricsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B026 /* CompanyListMetricsBuilder.swift */; };
 		A029 /* CompanyMetricsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B027 /* CompanyMetricsHeaderView.swift */; };
 		A030 /* CompanyListMetricsBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028 /* CompanyListMetricsBuilderTests.swift */; };
+		A031 /* EpisodeDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = B029 /* EpisodeDraft.swift */; };
+		A032 /* EpisodeFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B030 /* EpisodeFormValidator.swift */; };
+		A033 /* EpisodeEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031 /* EpisodeEditor.swift */; };
+		A034 /* EpisodeFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B032 /* EpisodeFormView.swift */; };
+		A035 /* EpisodeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B033 /* EpisodeRowView.swift */; };
+		A036 /* EpisodeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034 /* EpisodeDetailView.swift */; };
+		A037 /* EpisodeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B035 /* EpisodeListView.swift */; };
+		A038 /* EpisodeFormValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B036 /* EpisodeFormValidatorTests.swift */; };
+		A039 /* EpisodeEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B037 /* EpisodeEditorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +87,15 @@
 		B026 /* CompanyListMetricsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Companies/CompanyListMetricsBuilder.swift; sourceTree = SOURCE_ROOT; };
 		B027 /* CompanyMetricsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Companies/CompanyMetricsHeaderView.swift; sourceTree = SOURCE_ROOT; };
 		B028 /* CompanyListMetricsBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/CompanyListMetricsBuilderTests.swift; sourceTree = SOURCE_ROOT; };
+		B029 /* EpisodeDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Episodes/EpisodeDraft.swift; sourceTree = SOURCE_ROOT; };
+		B030 /* EpisodeFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Episodes/EpisodeFormValidator.swift; sourceTree = SOURCE_ROOT; };
+		B031 /* EpisodeEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Episodes/EpisodeEditor.swift; sourceTree = SOURCE_ROOT; };
+		B032 /* EpisodeFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Episodes/EpisodeFormView.swift; sourceTree = SOURCE_ROOT; };
+		B033 /* EpisodeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Episodes/EpisodeRowView.swift; sourceTree = SOURCE_ROOT; };
+		B034 /* EpisodeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Episodes/EpisodeDetailView.swift; sourceTree = SOURCE_ROOT; };
+		B035 /* EpisodeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Episodes/EpisodeListView.swift; sourceTree = SOURCE_ROOT; };
+		B036 /* EpisodeFormValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/EpisodeFormValidatorTests.swift; sourceTree = SOURCE_ROOT; };
+		B037 /* EpisodeEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/EpisodeEditorTests.swift; sourceTree = SOURCE_ROOT; };
 		B101 /* JobDeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobDeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B102 /* JobDeckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JobDeckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -138,6 +156,7 @@
 			children = (
 				G110 /* Home */,
 				G111 /* Companies */,
+				G115 /* Episodes */,
 				G112 /* SelfCards */,
 				G113 /* InterviewPrep */,
 				G114 /* Settings */,
@@ -168,6 +187,8 @@
 				B023 /* CompanyFormValidatorTests.swift */,
 				B024 /* CompanyEditorTests.swift */,
 				B028 /* CompanyListMetricsBuilderTests.swift */,
+				B036 /* EpisodeFormValidatorTests.swift */,
+				B037 /* EpisodeEditorTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -230,6 +251,20 @@
 				B015 /* SettingsView.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		G115 /* Episodes */ = {
+			isa = PBXGroup;
+			children = (
+				B029 /* EpisodeDraft.swift */,
+				B030 /* EpisodeFormValidator.swift */,
+				B031 /* EpisodeEditor.swift */,
+				B032 /* EpisodeFormView.swift */,
+				B033 /* EpisodeRowView.swift */,
+				B034 /* EpisodeDetailView.swift */,
+				B035 /* EpisodeListView.swift */,
+			);
+			path = Episodes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +368,13 @@
 				A027 /* CompanyListMetrics.swift in Sources */,
 				A028 /* CompanyListMetricsBuilder.swift in Sources */,
 				A029 /* CompanyMetricsHeaderView.swift in Sources */,
+				A031 /* EpisodeDraft.swift in Sources */,
+				A032 /* EpisodeFormValidator.swift in Sources */,
+				A033 /* EpisodeEditor.swift in Sources */,
+				A034 /* EpisodeFormView.swift in Sources */,
+				A035 /* EpisodeRowView.swift in Sources */,
+				A036 /* EpisodeDetailView.swift in Sources */,
+				A037 /* EpisodeListView.swift in Sources */,
 				A013 /* SelfCardsView.swift in Sources */,
 				A014 /* InterviewPrepView.swift in Sources */,
 				A015 /* SettingsView.swift in Sources */,
@@ -347,6 +389,8 @@
 				A025 /* CompanyFormValidatorTests.swift in Sources */,
 				A026 /* CompanyEditorTests.swift in Sources */,
 				A030 /* CompanyListMetricsBuilderTests.swift in Sources */,
+				A038 /* EpisodeFormValidatorTests.swift in Sources */,
+				A039 /* EpisodeEditorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
