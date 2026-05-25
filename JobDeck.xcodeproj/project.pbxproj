@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A001 /* JobDeckApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B001 /* JobDeckApp.swift */; };
+		A002 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002 /* RootTabView.swift */; };
+		A003 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = B003 /* Company.swift */; };
+		A004 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B004 /* Episode.swift */; };
+		A005 /* InterviewDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = B005 /* InterviewDeck.swift */; };
+		A006 /* HomeSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B006 /* HomeSnapshot.swift */; };
+		A007 /* PreviewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B007 /* PreviewStore.swift */; };
+		A008 /* SummaryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B008 /* SummaryCardView.swift */; };
+		A009 /* HomeSummaryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B009 /* HomeSummaryBuilder.swift */; };
+		A010 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B010 /* HomeViewModel.swift */; };
+		A011 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B011 /* HomeView.swift */; };
+		A012 /* CompanyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012 /* CompanyListView.swift */; };
+		A013 /* SelfCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B013 /* SelfCardsView.swift */; };
+		A014 /* InterviewPrepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B014 /* InterviewPrepView.swift */; };
+		A015 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B015 /* SettingsView.swift */; };
+		A016 /* HomeSummaryBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B016 /* HomeSummaryBuilderTests.swift */; };
+		A017 /* JobDeck.app in Products */ = {isa = PBXBuildFile; fileRef = B101 /* JobDeck.app */; };
+		A018 /* JobDeckTests.xctest in Products */ = {isa = PBXBuildFile; fileRef = B102 /* JobDeckTests.xctest */; };
+		A019 /* CompanyDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017 /* CompanyDraft.swift */; };
+		A020 /* CompanyFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B018 /* CompanyFormValidator.swift */; };
+		A021 /* CompanyEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B019 /* CompanyEditor.swift */; };
+		A022 /* CompanyFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B020 /* CompanyFormView.swift */; };
+		A023 /* CompanyRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B021 /* CompanyRowView.swift */; };
+		A024 /* CompanyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B022 /* CompanyDetailView.swift */; };
+		A025 /* CompanyFormValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B023 /* CompanyFormValidatorTests.swift */; };
+		A026 /* CompanyEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B024 /* CompanyEditorTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E001;
+			remoteInfo = JobDeck;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B001 /* JobDeckApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/JobDeckApp.swift; sourceTree = SOURCE_ROOT; };
+		B002 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/RootTabView.swift; sourceTree = SOURCE_ROOT; };
+		B003 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/Company.swift; sourceTree = SOURCE_ROOT; };
+		B004 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/Episode.swift; sourceTree = SOURCE_ROOT; };
+		B005 /* InterviewDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/InterviewDeck.swift; sourceTree = SOURCE_ROOT; };
+		B006 /* HomeSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/HomeSnapshot.swift; sourceTree = SOURCE_ROOT; };
+		B007 /* PreviewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/PreviewStore.swift; sourceTree = SOURCE_ROOT; };
+		B008 /* SummaryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components/SummaryCardView.swift; sourceTree = SOURCE_ROOT; };
+		B009 /* HomeSummaryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Home/HomeSummaryBuilder.swift; sourceTree = SOURCE_ROOT; };
+		B010 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Home/HomeViewModel.swift; sourceTree = SOURCE_ROOT; };
+		B011 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Home/HomeView.swift; sourceTree = SOURCE_ROOT; };
+		B012 /* CompanyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Companies/CompanyListView.swift; sourceTree = SOURCE_ROOT; };
+		B013 /* SelfCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/SelfCards/SelfCardsView.swift; sourceTree = SOURCE_ROOT; };
+		B014 /* InterviewPrepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/InterviewPrep/InterviewPrepView.swift; sourceTree = SOURCE_ROOT; };
+		B015 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Settings/SettingsView.swift; sourceTree = SOURCE_ROOT; };
+		B016 /* HomeSummaryBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/HomeSummaryBuilderTests.swift; sourceTree = SOURCE_ROOT; };
+		B017 /* CompanyDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Companies/CompanyDraft.swift; sourceTree = SOURCE_ROOT; };
+		B018 /* CompanyFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Companies/CompanyFormValidator.swift; sourceTree = SOURCE_ROOT; };
+		B019 /* CompanyEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Companies/CompanyEditor.swift; sourceTree = SOURCE_ROOT; };
+		B020 /* CompanyFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Companies/CompanyFormView.swift; sourceTree = SOURCE_ROOT; };
+		B021 /* CompanyRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Companies/CompanyRowView.swift; sourceTree = SOURCE_ROOT; };
+		B022 /* CompanyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Companies/CompanyDetailView.swift; sourceTree = SOURCE_ROOT; };
+		B023 /* CompanyFormValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/CompanyFormValidatorTests.swift; sourceTree = SOURCE_ROOT; };
+		B024 /* CompanyEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/CompanyEditorTests.swift; sourceTree = SOURCE_ROOT; };
+		B101 /* JobDeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobDeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B102 /* JobDeckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JobDeckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		G001 = {
+			isa = PBXGroup;
+			children = (
+				G100 /* App */,
+				G101 /* Models */,
+				G102 /* Features */,
+				G103 /* Components */,
+				G104 /* Services */,
+				G105 /* Tests */,
+				G106 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		G100 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B001 /* JobDeckApp.swift */,
+				B002 /* RootTabView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		G101 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B003 /* Company.swift */,
+				B004 /* Episode.swift */,
+				B005 /* InterviewDeck.swift */,
+				B006 /* HomeSnapshot.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		G102 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				G110 /* Home */,
+				G111 /* Companies */,
+				G112 /* SelfCards */,
+				G113 /* InterviewPrep */,
+				G114 /* Settings */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		G103 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B008 /* SummaryCardView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		G104 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B007 /* PreviewStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		G105 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B016 /* HomeSummaryBuilderTests.swift */,
+				B023 /* CompanyFormValidatorTests.swift */,
+				B024 /* CompanyEditorTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		G106 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B101 /* JobDeck.app */,
+				B102 /* JobDeckTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		G110 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B009 /* HomeSummaryBuilder.swift */,
+				B010 /* HomeViewModel.swift */,
+				B011 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		G111 /* Companies */ = {
+			isa = PBXGroup;
+			children = (
+				B017 /* CompanyDraft.swift */,
+				B018 /* CompanyFormValidator.swift */,
+				B019 /* CompanyEditor.swift */,
+				B020 /* CompanyFormView.swift */,
+				B021 /* CompanyRowView.swift */,
+				B022 /* CompanyDetailView.swift */,
+				B012 /* CompanyListView.swift */,
+			);
+			path = Companies;
+			sourceTree = "<group>";
+		};
+		G112 /* SelfCards */ = {
+			isa = PBXGroup;
+			children = (
+				B013 /* SelfCardsView.swift */,
+			);
+			path = SelfCards;
+			sourceTree = "<group>";
+		};
+		G113 /* InterviewPrep */ = {
+			isa = PBXGroup;
+			children = (
+				B014 /* InterviewPrepView.swift */,
+			);
+			path = InterviewPrep;
+			sourceTree = "<group>";
+		};
+		G114 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B015 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E001 /* JobDeck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = H001 /* Build configuration list for PBXNativeTarget "JobDeck" */;
+			buildPhases = (
+				I001 /* Sources */,
+				F001 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JobDeck;
+			productName = JobDeck;
+			productReference = B101 /* JobDeck.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E002 /* JobDeckTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = H002 /* Build configuration list for PBXNativeTarget "JobDeckTests" */;
+			buildPhases = (
+				I002 /* Sources */,
+				F002 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				J001 /* PBXTargetDependency */,
+			);
+			name = JobDeckTests;
+			productName = JobDeckTests;
+			productReference = B102 /* JobDeckTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					E001 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					E002 = {
+						CreatedOnToolsVersion = 26.5;
+						TestTargetID = E001;
+					};
+				};
+			};
+			buildConfigurationList = H003 /* Build configuration list for PBXProject "JobDeck" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = G001;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = G106 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E001 /* JobDeck */,
+				E002 /* JobDeckTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		I001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A001 /* JobDeckApp.swift in Sources */,
+				A002 /* RootTabView.swift in Sources */,
+				A003 /* Company.swift in Sources */,
+				A004 /* Episode.swift in Sources */,
+				A005 /* InterviewDeck.swift in Sources */,
+				A006 /* HomeSnapshot.swift in Sources */,
+				A007 /* PreviewStore.swift in Sources */,
+				A008 /* SummaryCardView.swift in Sources */,
+				A009 /* HomeSummaryBuilder.swift in Sources */,
+				A010 /* HomeViewModel.swift in Sources */,
+				A011 /* HomeView.swift in Sources */,
+				A012 /* CompanyListView.swift in Sources */,
+				A019 /* CompanyDraft.swift in Sources */,
+				A020 /* CompanyFormValidator.swift in Sources */,
+				A021 /* CompanyEditor.swift in Sources */,
+				A022 /* CompanyFormView.swift in Sources */,
+				A023 /* CompanyRowView.swift in Sources */,
+				A024 /* CompanyDetailView.swift in Sources */,
+				A013 /* SelfCardsView.swift in Sources */,
+				A014 /* InterviewPrepView.swift in Sources */,
+				A015 /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		I002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A016 /* HomeSummaryBuilderTests.swift in Sources */,
+				A025 /* CompanyFormValidatorTests.swift in Sources */,
+				A026 /* CompanyEditorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		J001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E001 /* JobDeck */;
+			targetProxy = C001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		K001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"\"";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nagaseibuki.JobDeck;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		K002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"\"";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nagaseibuki.JobDeck;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		K003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nagaseibuki.JobDeckTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JobDeck.app/JobDeck";
+			};
+			name = Debug;
+		};
+		K004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nagaseibuki.JobDeckTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JobDeck.app/JobDeck";
+			};
+			name = Release;
+		};
+		K005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		K006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		H001 /* Build configuration list for PBXNativeTarget "JobDeck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				K001 /* Debug */,
+				K002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		H002 /* Build configuration list for PBXNativeTarget "JobDeckTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				K003 /* Debug */,
+				K004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		H003 /* Build configuration list for PBXProject "JobDeck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				K005 /* Debug */,
+				K006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D001 /* Project object */;
+}
