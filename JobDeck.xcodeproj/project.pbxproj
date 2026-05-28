@@ -52,6 +52,17 @@
 		A043 /* CompanyEpisodeLinkSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B041 /* CompanyEpisodeLinkSheet.swift */; };
 		A044 /* CompanyEpisodeLinkBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B042 /* CompanyEpisodeLinkBuilderTests.swift */; };
 		A045 /* CompanyEpisodeLinkEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B043 /* CompanyEpisodeLinkEditorTests.swift */; };
+		A046 /* InterviewPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B044 /* InterviewPhase.swift */; };
+		A047 /* ReverseQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045 /* ReverseQuestion.swift */; };
+		A048 /* ReverseQuestionDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046 /* ReverseQuestionDraft.swift */; };
+		A049 /* ReverseQuestionFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B047 /* ReverseQuestionFormValidator.swift */; };
+		A050 /* ReverseQuestionEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B048 /* ReverseQuestionEditor.swift */; };
+		A051 /* ReverseQuestionFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049 /* ReverseQuestionFormView.swift */; };
+		A052 /* ReverseQuestionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050 /* ReverseQuestionRowView.swift */; };
+		A053 /* ReverseQuestionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B051 /* ReverseQuestionListView.swift */; };
+		A054 /* ReverseQuestionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B052 /* ReverseQuestionDetailView.swift */; };
+		A055 /* ReverseQuestionFormValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053 /* ReverseQuestionFormValidatorTests.swift */; };
+		A056 /* ReverseQuestionEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B054 /* ReverseQuestionEditorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +119,17 @@
 		B041 /* CompanyEpisodeLinkSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Companies/CompanyEpisodeLinkSheet.swift; sourceTree = SOURCE_ROOT; };
 		B042 /* CompanyEpisodeLinkBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/CompanyEpisodeLinkBuilderTests.swift; sourceTree = SOURCE_ROOT; };
 		B043 /* CompanyEpisodeLinkEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/CompanyEpisodeLinkEditorTests.swift; sourceTree = SOURCE_ROOT; };
+		B044 /* InterviewPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/InterviewPhase.swift; sourceTree = SOURCE_ROOT; };
+		B045 /* ReverseQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/ReverseQuestion.swift; sourceTree = SOURCE_ROOT; };
+		B046 /* ReverseQuestionDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/ReverseQuestions/ReverseQuestionDraft.swift; sourceTree = SOURCE_ROOT; };
+		B047 /* ReverseQuestionFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/ReverseQuestions/ReverseQuestionFormValidator.swift; sourceTree = SOURCE_ROOT; };
+		B048 /* ReverseQuestionEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/ReverseQuestions/ReverseQuestionEditor.swift; sourceTree = SOURCE_ROOT; };
+		B049 /* ReverseQuestionFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/ReverseQuestions/ReverseQuestionFormView.swift; sourceTree = SOURCE_ROOT; };
+		B050 /* ReverseQuestionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/ReverseQuestions/ReverseQuestionRowView.swift; sourceTree = SOURCE_ROOT; };
+		B051 /* ReverseQuestionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/ReverseQuestions/ReverseQuestionListView.swift; sourceTree = SOURCE_ROOT; };
+		B052 /* ReverseQuestionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/ReverseQuestions/ReverseQuestionDetailView.swift; sourceTree = SOURCE_ROOT; };
+		B053 /* ReverseQuestionFormValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/ReverseQuestionFormValidatorTests.swift; sourceTree = SOURCE_ROOT; };
+		B054 /* ReverseQuestionEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/ReverseQuestionEditorTests.swift; sourceTree = SOURCE_ROOT; };
 		B101 /* JobDeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobDeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B102 /* JobDeckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JobDeckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -158,8 +180,10 @@
 				B003 /* Company.swift */,
 				B038 /* CompanyEpisodeLink.swift */,
 				B004 /* Episode.swift */,
+				B044 /* InterviewPhase.swift */,
 				B005 /* InterviewDeck.swift */,
 				B006 /* HomeSnapshot.swift */,
+				B045 /* ReverseQuestion.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,6 +194,7 @@
 				G110 /* Home */,
 				G111 /* Companies */,
 				G115 /* Episodes */,
+				G116 /* ReverseQuestions */,
 				G112 /* SelfCards */,
 				G113 /* InterviewPrep */,
 				G114 /* Settings */,
@@ -204,6 +229,8 @@
 				B043 /* CompanyEpisodeLinkEditorTests.swift */,
 				B036 /* EpisodeFormValidatorTests.swift */,
 				B037 /* EpisodeEditorTests.swift */,
+				B053 /* ReverseQuestionFormValidatorTests.swift */,
+				B054 /* ReverseQuestionEditorTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -283,6 +310,20 @@
 				B035 /* EpisodeListView.swift */,
 			);
 			path = Episodes;
+			sourceTree = "<group>";
+		};
+		G116 /* ReverseQuestions */ = {
+			isa = PBXGroup;
+			children = (
+				B046 /* ReverseQuestionDraft.swift */,
+				B047 /* ReverseQuestionFormValidator.swift */,
+				B048 /* ReverseQuestionEditor.swift */,
+				B049 /* ReverseQuestionFormView.swift */,
+				B050 /* ReverseQuestionRowView.swift */,
+				B051 /* ReverseQuestionListView.swift */,
+				B052 /* ReverseQuestionDetailView.swift */,
+			);
+			path = ReverseQuestions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,8 +410,10 @@
 				A002 /* RootTabView.swift in Sources */,
 				A003 /* Company.swift in Sources */,
 				A004 /* Episode.swift in Sources */,
+				A046 /* InterviewPhase.swift in Sources */,
 				A005 /* InterviewDeck.swift in Sources */,
 				A006 /* HomeSnapshot.swift in Sources */,
+				A047 /* ReverseQuestion.swift in Sources */,
 				A007 /* PreviewStore.swift in Sources */,
 				A008 /* SummaryCardView.swift in Sources */,
 				A009 /* HomeSummaryBuilder.swift in Sources */,
@@ -397,6 +440,13 @@
 				A035 /* EpisodeRowView.swift in Sources */,
 				A036 /* EpisodeDetailView.swift in Sources */,
 				A037 /* EpisodeListView.swift in Sources */,
+				A048 /* ReverseQuestionDraft.swift in Sources */,
+				A049 /* ReverseQuestionFormValidator.swift in Sources */,
+				A050 /* ReverseQuestionEditor.swift in Sources */,
+				A051 /* ReverseQuestionFormView.swift in Sources */,
+				A052 /* ReverseQuestionRowView.swift in Sources */,
+				A053 /* ReverseQuestionListView.swift in Sources */,
+				A054 /* ReverseQuestionDetailView.swift in Sources */,
 				A013 /* SelfCardsView.swift in Sources */,
 				A014 /* InterviewPrepView.swift in Sources */,
 				A015 /* SettingsView.swift in Sources */,
@@ -415,6 +465,8 @@
 				A045 /* CompanyEpisodeLinkEditorTests.swift in Sources */,
 				A038 /* EpisodeFormValidatorTests.swift in Sources */,
 				A039 /* EpisodeEditorTests.swift in Sources */,
+				A055 /* ReverseQuestionFormValidatorTests.swift in Sources */,
+				A056 /* ReverseQuestionEditorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

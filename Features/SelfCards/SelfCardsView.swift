@@ -12,6 +12,11 @@ struct SelfCardsView: View {
                     } label: {
                         Label("エピソード", systemImage: "text.quote")
                     }
+                    NavigationLink {
+                        ReverseQuestionListView()
+                    } label: {
+                        Label("逆質問", systemImage: "questionmark.bubble")
+                    }
                 }
             }
             .navigationTitle("自分カード")
