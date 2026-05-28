@@ -7,6 +7,7 @@ struct CompanyDetailView: View {
 
     @Query(sort: \CompanyEpisodeLink.updatedAt, order: .reverse) private var allLinks: [CompanyEpisodeLink]
     @Query(sort: \Episode.updatedAt, order: .reverse) private var allEpisodes: [Episode]
+    @Query(sort: \InterviewLog.interviewAt, order: .reverse) private var allInterviewLogs: [InterviewLog]
 
     @Bindable var company: Company
 
@@ -14,9 +15,12 @@ struct CompanyDetailView: View {
     @State private var errorMessage: String?
     @State private var showingDeleteAlert = false
     @State private var showingLinkSheet = false
+    @State private var showingInterviewLogSheet = false
+    @State private var interviewLogDraft = InterviewLogDraft()
 
     private let editor = CompanyEditor()
     private let linkEditor = CompanyEpisodeLinkEditor()
+    private let interviewLogEditor = InterviewLogEditor()
 
     init(company: Company) {
         self.company = company
@@ -73,6 +77,28 @@ struct CompanyDetailView: View {
                         Label("エピソードを紐付ける", systemImage: "link.badge.plus")
                     }
                 }
+
+                Section("面接ログ") {
+                    if interviewLogs.isEmpty {
+                        Text("まだ面接ログがありません")
+                            .foregroundStyle(.secondary)
+                    } else {
+                        ForEach(interviewLogs) { interviewLog in
+                            NavigationLink {
+                                InterviewLogDetailView(companyID: company.id, interviewLog: interviewLog)
+                            } label: {
+                                InterviewLogRowView(interviewLog: interviewLog)
+                            }
+                        }
+                    }
+
+                    Button {
+                        interviewLogDraft = InterviewLogDraft()
+                        showingInterviewLogSheet = true
+                    } label: {
+                        Label("面接ログを追加", systemImage: "plus.bubble")
+                    }
+                }
             }
         )
         .toolbar {
@@ -94,6 +120,14 @@ struct CompanyDetailView: View {
             CompanyEpisodeLinkSheet(
                 episodeCandidates: availableEpisodeCandidates,
                 onAdd: addLink
+            )
+        }
+        .sheet(isPresented: $showingInterviewLogSheet) {
+            InterviewLogFormView(
+                title: "面接ログ追加",
+                draft: $interviewLogDraft,
+                errorMessage: errorMessage,
+                onSave: createInterviewLog
             )
         }
     }
@@ -118,6 +152,10 @@ struct CompanyDetailView: View {
         )
     }
 
+    private var interviewLogs: [InterviewLog] {
+        allInterviewLogs.filter { $0.companyID == company.id }
+    }
+
     private func save() {
         do {
             _ = try editor.save(
@@ -135,6 +173,9 @@ struct CompanyDetailView: View {
         do {
             for link in companyLinks {
                 modelContext.delete(link)
+            }
+            for interviewLog in interviewLogs {
+                modelContext.delete(interviewLog)
             }
             modelContext.delete(company)
             try modelContext.save()
@@ -170,6 +211,19 @@ struct CompanyDetailView: View {
             try modelContext.save()
         } catch {
             errorMessage = "紐付けの削除に失敗しました。"
+        }
+    }
+
+    private func createInterviewLog() {
+        do {
+            _ = try interviewLogEditor.save(
+                companyID: company.id,
+                draft: interviewLogDraft,
+                in: modelContext
+            )
+            showingInterviewLogSheet = false
+        } catch {
+            errorMessage = error.localizedDescription
         }
     }
 }

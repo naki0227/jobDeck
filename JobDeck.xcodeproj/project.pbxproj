@@ -63,6 +63,15 @@
 		A054 /* ReverseQuestionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B052 /* ReverseQuestionDetailView.swift */; };
 		A055 /* ReverseQuestionFormValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053 /* ReverseQuestionFormValidatorTests.swift */; };
 		A056 /* ReverseQuestionEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B054 /* ReverseQuestionEditorTests.swift */; };
+		A057 /* InterviewLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055 /* InterviewLog.swift */; };
+		A058 /* InterviewLogDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056 /* InterviewLogDraft.swift */; };
+		A059 /* InterviewLogFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057 /* InterviewLogFormValidator.swift */; };
+		A060 /* InterviewLogEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B058 /* InterviewLogEditor.swift */; };
+		A061 /* InterviewLogFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B059 /* InterviewLogFormView.swift */; };
+		A062 /* InterviewLogRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B060 /* InterviewLogRowView.swift */; };
+		A063 /* InterviewLogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B061 /* InterviewLogDetailView.swift */; };
+		A064 /* InterviewLogFormValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062 /* InterviewLogFormValidatorTests.swift */; };
+		A065 /* InterviewLogEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B063 /* InterviewLogEditorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +139,15 @@
 		B052 /* ReverseQuestionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/ReverseQuestions/ReverseQuestionDetailView.swift; sourceTree = SOURCE_ROOT; };
 		B053 /* ReverseQuestionFormValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/ReverseQuestionFormValidatorTests.swift; sourceTree = SOURCE_ROOT; };
 		B054 /* ReverseQuestionEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/ReverseQuestionEditorTests.swift; sourceTree = SOURCE_ROOT; };
+		B055 /* InterviewLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/InterviewLog.swift; sourceTree = SOURCE_ROOT; };
+		B056 /* InterviewLogDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/InterviewLogs/InterviewLogDraft.swift; sourceTree = SOURCE_ROOT; };
+		B057 /* InterviewLogFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/InterviewLogs/InterviewLogFormValidator.swift; sourceTree = SOURCE_ROOT; };
+		B058 /* InterviewLogEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/InterviewLogs/InterviewLogEditor.swift; sourceTree = SOURCE_ROOT; };
+		B059 /* InterviewLogFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/InterviewLogs/InterviewLogFormView.swift; sourceTree = SOURCE_ROOT; };
+		B060 /* InterviewLogRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/InterviewLogs/InterviewLogRowView.swift; sourceTree = SOURCE_ROOT; };
+		B061 /* InterviewLogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/InterviewLogs/InterviewLogDetailView.swift; sourceTree = SOURCE_ROOT; };
+		B062 /* InterviewLogFormValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/InterviewLogFormValidatorTests.swift; sourceTree = SOURCE_ROOT; };
+		B063 /* InterviewLogEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/InterviewLogEditorTests.swift; sourceTree = SOURCE_ROOT; };
 		B101 /* JobDeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobDeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B102 /* JobDeckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JobDeckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -181,6 +199,7 @@
 				B038 /* CompanyEpisodeLink.swift */,
 				B004 /* Episode.swift */,
 				B044 /* InterviewPhase.swift */,
+				B055 /* InterviewLog.swift */,
 				B005 /* InterviewDeck.swift */,
 				B006 /* HomeSnapshot.swift */,
 				B045 /* ReverseQuestion.swift */,
@@ -194,6 +213,7 @@
 				G110 /* Home */,
 				G111 /* Companies */,
 				G115 /* Episodes */,
+				G117 /* InterviewLogs */,
 				G116 /* ReverseQuestions */,
 				G112 /* SelfCards */,
 				G113 /* InterviewPrep */,
@@ -229,6 +249,8 @@
 				B043 /* CompanyEpisodeLinkEditorTests.swift */,
 				B036 /* EpisodeFormValidatorTests.swift */,
 				B037 /* EpisodeEditorTests.swift */,
+				B062 /* InterviewLogFormValidatorTests.swift */,
+				B063 /* InterviewLogEditorTests.swift */,
 				B053 /* ReverseQuestionFormValidatorTests.swift */,
 				B054 /* ReverseQuestionEditorTests.swift */,
 			);
@@ -326,6 +348,19 @@
 			path = ReverseQuestions;
 			sourceTree = "<group>";
 		};
+		G117 /* InterviewLogs */ = {
+			isa = PBXGroup;
+			children = (
+				B056 /* InterviewLogDraft.swift */,
+				B057 /* InterviewLogFormValidator.swift */,
+				B058 /* InterviewLogEditor.swift */,
+				B059 /* InterviewLogFormView.swift */,
+				B060 /* InterviewLogRowView.swift */,
+				B061 /* InterviewLogDetailView.swift */,
+			);
+			path = InterviewLogs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -411,6 +446,7 @@
 				A003 /* Company.swift in Sources */,
 				A004 /* Episode.swift in Sources */,
 				A046 /* InterviewPhase.swift in Sources */,
+				A057 /* InterviewLog.swift in Sources */,
 				A005 /* InterviewDeck.swift in Sources */,
 				A006 /* HomeSnapshot.swift in Sources */,
 				A047 /* ReverseQuestion.swift in Sources */,
@@ -440,6 +476,12 @@
 				A035 /* EpisodeRowView.swift in Sources */,
 				A036 /* EpisodeDetailView.swift in Sources */,
 				A037 /* EpisodeListView.swift in Sources */,
+				A058 /* InterviewLogDraft.swift in Sources */,
+				A059 /* InterviewLogFormValidator.swift in Sources */,
+				A060 /* InterviewLogEditor.swift in Sources */,
+				A061 /* InterviewLogFormView.swift in Sources */,
+				A062 /* InterviewLogRowView.swift in Sources */,
+				A063 /* InterviewLogDetailView.swift in Sources */,
 				A048 /* ReverseQuestionDraft.swift in Sources */,
 				A049 /* ReverseQuestionFormValidator.swift in Sources */,
 				A050 /* ReverseQuestionEditor.swift in Sources */,
@@ -465,6 +507,8 @@
 				A045 /* CompanyEpisodeLinkEditorTests.swift in Sources */,
 				A038 /* EpisodeFormValidatorTests.swift in Sources */,
 				A039 /* EpisodeEditorTests.swift in Sources */,
+				A064 /* InterviewLogFormValidatorTests.swift in Sources */,
+				A065 /* InterviewLogEditorTests.swift in Sources */,
 				A055 /* ReverseQuestionFormValidatorTests.swift in Sources */,
 				A056 /* ReverseQuestionEditorTests.swift in Sources */,
 			);

@@ -11,6 +11,7 @@ struct JobDeckApp: App {
             Company.self,
             CompanyEpisodeLink.self,
             Episode.self,
+            InterviewLog.self,
             InterviewDeck.self,
             ReverseQuestion.self,
         ])
