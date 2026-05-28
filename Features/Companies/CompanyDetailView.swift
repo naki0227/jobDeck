@@ -7,6 +7,7 @@ struct CompanyDetailView: View {
 
     @Query(sort: \CompanyEpisodeLink.updatedAt, order: .reverse) private var allLinks: [CompanyEpisodeLink]
     @Query(sort: \Episode.updatedAt, order: .reverse) private var allEpisodes: [Episode]
+    @Query(sort: \InterviewDeck.interviewAt) private var allInterviewDecks: [InterviewDeck]
     @Query(sort: \InterviewLog.interviewAt, order: .reverse) private var allInterviewLogs: [InterviewLog]
 
     @Bindable var company: Company
@@ -14,11 +15,14 @@ struct CompanyDetailView: View {
     @State private var draft: CompanyDraft
     @State private var errorMessage: String?
     @State private var showingDeleteAlert = false
+    @State private var showingDeckSheet = false
     @State private var showingLinkSheet = false
     @State private var showingInterviewLogSheet = false
+    @State private var interviewDeckDraft = InterviewDeckDraft()
     @State private var interviewLogDraft = InterviewLogDraft()
 
     private let editor = CompanyEditor()
+    private let interviewDeckEditor = InterviewDeckEditor()
     private let linkEditor = CompanyEpisodeLinkEditor()
     private let interviewLogEditor = InterviewLogEditor()
 
@@ -99,6 +103,31 @@ struct CompanyDetailView: View {
                         Label("面接ログを追加", systemImage: "plus.bubble")
                     }
                 }
+
+                Section("面接前デッキ") {
+                    if interviewDecks.isEmpty {
+                        Text("まだ面接前デッキがありません")
+                            .foregroundStyle(.secondary)
+                    } else {
+                        ForEach(interviewDecks) { interviewDeck in
+                            NavigationLink {
+                                InterviewDeckDetailView(companyID: company.id, interviewDeck: interviewDeck)
+                            } label: {
+                                InterviewDeckRowView(
+                                    interviewDeck: interviewDeck,
+                                    companyName: company.name
+                                )
+                            }
+                        }
+                    }
+
+                    Button {
+                        interviewDeckDraft = InterviewDeckDraft()
+                        showingDeckSheet = true
+                    } label: {
+                        Label("面接前デッキを追加", systemImage: "rectangle.stack.badge.plus")
+                    }
+                }
             }
         )
         .toolbar {
@@ -120,6 +149,14 @@ struct CompanyDetailView: View {
             CompanyEpisodeLinkSheet(
                 episodeCandidates: availableEpisodeCandidates,
                 onAdd: addLink
+            )
+        }
+        .sheet(isPresented: $showingDeckSheet) {
+            InterviewDeckFormView(
+                title: "面接前デッキ追加",
+                draft: $interviewDeckDraft,
+                errorMessage: errorMessage,
+                onSave: createInterviewDeck
             )
         }
         .sheet(isPresented: $showingInterviewLogSheet) {
@@ -156,6 +193,10 @@ struct CompanyDetailView: View {
         allInterviewLogs.filter { $0.companyID == company.id }
     }
 
+    private var interviewDecks: [InterviewDeck] {
+        allInterviewDecks.filter { $0.companyID == company.id }
+    }
+
     private func save() {
         do {
             _ = try editor.save(
@@ -176,6 +217,9 @@ struct CompanyDetailView: View {
             }
             for interviewLog in interviewLogs {
                 modelContext.delete(interviewLog)
+            }
+            for interviewDeck in interviewDecks {
+                modelContext.delete(interviewDeck)
             }
             modelContext.delete(company)
             try modelContext.save()
@@ -222,6 +266,19 @@ struct CompanyDetailView: View {
                 in: modelContext
             )
             showingInterviewLogSheet = false
+        } catch {
+            errorMessage = error.localizedDescription
+        }
+    }
+
+    private func createInterviewDeck() {
+        do {
+            _ = try interviewDeckEditor.save(
+                companyID: company.id,
+                draft: interviewDeckDraft,
+                in: modelContext
+            )
+            showingDeckSheet = false
         } catch {
             errorMessage = error.localizedDescription
         }

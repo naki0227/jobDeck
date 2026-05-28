@@ -72,6 +72,14 @@
 		A063 /* InterviewLogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B061 /* InterviewLogDetailView.swift */; };
 		A064 /* InterviewLogFormValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B062 /* InterviewLogFormValidatorTests.swift */; };
 		A065 /* InterviewLogEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B063 /* InterviewLogEditorTests.swift */; };
+		A066 /* InterviewDeckDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064 /* InterviewDeckDraft.swift */; };
+		A067 /* InterviewDeckFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B065 /* InterviewDeckFormValidator.swift */; };
+		A068 /* InterviewDeckEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B066 /* InterviewDeckEditor.swift */; };
+		A069 /* InterviewDeckFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067 /* InterviewDeckFormView.swift */; };
+		A070 /* InterviewDeckRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B068 /* InterviewDeckRowView.swift */; };
+		A071 /* InterviewDeckDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B069 /* InterviewDeckDetailView.swift */; };
+		A072 /* InterviewDeckFormValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B070 /* InterviewDeckFormValidatorTests.swift */; };
+		A073 /* InterviewDeckEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B071 /* InterviewDeckEditorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +156,14 @@
 		B061 /* InterviewLogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/InterviewLogs/InterviewLogDetailView.swift; sourceTree = SOURCE_ROOT; };
 		B062 /* InterviewLogFormValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/InterviewLogFormValidatorTests.swift; sourceTree = SOURCE_ROOT; };
 		B063 /* InterviewLogEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/InterviewLogEditorTests.swift; sourceTree = SOURCE_ROOT; };
+		B064 /* InterviewDeckDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/InterviewPrep/InterviewDeckDraft.swift; sourceTree = SOURCE_ROOT; };
+		B065 /* InterviewDeckFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/InterviewPrep/InterviewDeckFormValidator.swift; sourceTree = SOURCE_ROOT; };
+		B066 /* InterviewDeckEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/InterviewPrep/InterviewDeckEditor.swift; sourceTree = SOURCE_ROOT; };
+		B067 /* InterviewDeckFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/InterviewPrep/InterviewDeckFormView.swift; sourceTree = SOURCE_ROOT; };
+		B068 /* InterviewDeckRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/InterviewPrep/InterviewDeckRowView.swift; sourceTree = SOURCE_ROOT; };
+		B069 /* InterviewDeckDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/InterviewPrep/InterviewDeckDetailView.swift; sourceTree = SOURCE_ROOT; };
+		B070 /* InterviewDeckFormValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/InterviewDeckFormValidatorTests.swift; sourceTree = SOURCE_ROOT; };
+		B071 /* InterviewDeckEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/InterviewDeckEditorTests.swift; sourceTree = SOURCE_ROOT; };
 		B101 /* JobDeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobDeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B102 /* JobDeckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JobDeckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -249,6 +265,8 @@
 				B043 /* CompanyEpisodeLinkEditorTests.swift */,
 				B036 /* EpisodeFormValidatorTests.swift */,
 				B037 /* EpisodeEditorTests.swift */,
+				B070 /* InterviewDeckFormValidatorTests.swift */,
+				B071 /* InterviewDeckEditorTests.swift */,
 				B062 /* InterviewLogFormValidatorTests.swift */,
 				B063 /* InterviewLogEditorTests.swift */,
 				B053 /* ReverseQuestionFormValidatorTests.swift */,
@@ -307,6 +325,12 @@
 		G113 /* InterviewPrep */ = {
 			isa = PBXGroup;
 			children = (
+				B064 /* InterviewDeckDraft.swift */,
+				B065 /* InterviewDeckFormValidator.swift */,
+				B066 /* InterviewDeckEditor.swift */,
+				B067 /* InterviewDeckFormView.swift */,
+				B068 /* InterviewDeckRowView.swift */,
+				B069 /* InterviewDeckDetailView.swift */,
 				B014 /* InterviewPrepView.swift */,
 			);
 			path = InterviewPrep;
@@ -476,6 +500,12 @@
 				A035 /* EpisodeRowView.swift in Sources */,
 				A036 /* EpisodeDetailView.swift in Sources */,
 				A037 /* EpisodeListView.swift in Sources */,
+				A066 /* InterviewDeckDraft.swift in Sources */,
+				A067 /* InterviewDeckFormValidator.swift in Sources */,
+				A068 /* InterviewDeckEditor.swift in Sources */,
+				A069 /* InterviewDeckFormView.swift in Sources */,
+				A070 /* InterviewDeckRowView.swift in Sources */,
+				A071 /* InterviewDeckDetailView.swift in Sources */,
 				A058 /* InterviewLogDraft.swift in Sources */,
 				A059 /* InterviewLogFormValidator.swift in Sources */,
 				A060 /* InterviewLogEditor.swift in Sources */,
@@ -507,6 +537,8 @@
 				A045 /* CompanyEpisodeLinkEditorTests.swift in Sources */,
 				A038 /* EpisodeFormValidatorTests.swift in Sources */,
 				A039 /* EpisodeEditorTests.swift in Sources */,
+				A072 /* InterviewDeckFormValidatorTests.swift in Sources */,
+				A073 /* InterviewDeckEditorTests.swift in Sources */,
 				A064 /* InterviewLogFormValidatorTests.swift in Sources */,
 				A065 /* InterviewLogEditorTests.swift in Sources */,
 				A055 /* ReverseQuestionFormValidatorTests.swift in Sources */,
